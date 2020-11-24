@@ -42,14 +42,17 @@
       </li>
       {% endif %}
 
+      <!-- Category menu code -->
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown link
+          Categories
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+
+          {% for item in cat_menu %}
+            <a class="dropdown-item" href="{% url 'category' item|slugify %}">{{ item }}</a>
+          {% endfor %}
           <a class="dropdown-item" href="http://localhost:8000/admin">Admin</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
         </div>
       </li>
     </ul>
