@@ -4,7 +4,7 @@
 
 {% if user.is_authenticated %}
     {% if user.id == post.author.id %}
-        <h1>Delete Post...</h1>
+        <h1>Delete Post!</h1>
         <br/>
         <br/>
         <h3>Delete: {{ post.title }}</h3>
@@ -18,14 +18,11 @@
         </form>
         </div>
     {% else %}
-    Please login to delete posts.
+    <p>Please login to delete posts.</p>
     {% endif %}
+
 {% else %}
-
-Please login to delete posts.
-
+<p>Please login to delete posts.</p>
 {% endif %}
-
-
 
 {% endblock %}

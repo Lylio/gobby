@@ -3,7 +3,7 @@
 {% block content %}
 
 {% if user.is_authenticated %}
-    <h1>Add Blog Post...</h1>
+    <h1>Add Blog Post</h1>
     <br/>
     <br/>
     <div class="form-group">
@@ -14,12 +14,13 @@
     </form>
     </div>
 
+<script>
+    var userId = "{{ user.id }}";
+    document.getElementById("author-field").value = userId;
+</script>
+
 {% else %}
-
-Please login to create posts.
-
+<p>Please login to create posts.</p>
 {% endif %}
-
-
 
 {% endblock %}
