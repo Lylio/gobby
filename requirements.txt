@@ -6,3 +6,4 @@ Pillow==8.0.1
 pybuilder==0.12.6
 pytz==2020.4
 sqlparse==0.4.1
+psycopg2-binary>=2.8
