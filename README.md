@@ -4,7 +4,8 @@
 ## Built with Python & Django
 
 ### Description
-A Django blog. Demo can be found at (coming soon).
+A Django blog.
 
-#### Launch Instructions
-(coming soon)
+#### Docker-Compose Launch
+1. `docker-compose up` - this command will spin up the Django blog which uses the embedded SQLite database. Access the app
+at http://localhost:8000/
